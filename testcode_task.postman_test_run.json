@@ -1,0 +1,662 @@
+{
+	"id": "9f68423a-f1e7-9641-1a02-e750ba53b5b7",
+	"name": "testcode_task",
+	"allTests": [],
+	"timestamp": 1606826623367,
+	"collection_id": "f4fb6b74-8a30-1736-4a5a-c8ea082f1ef3",
+	"folder_id": 0,
+	"target_type": "collection",
+	"environment_id": "95aff3ea-ad71-844b-d459-fe7276f533b5",
+	"data": [],
+	"delay": 0,
+	"count": 1,
+	"collection": {
+		"id": "f4fb6b74-8a30-1736-4a5a-c8ea082f1ef3",
+		"name": "testcode_task",
+		"description": "api test ",
+		"order": [],
+		"folders": [
+			{
+				"name": "Delete",
+				"description": "delete request",
+				"collectionId": "f4fb6b74-8a30-1736-4a5a-c8ea082f1ef3",
+				"collection": "f4fb6b74-8a30-1736-4a5a-c8ea082f1ef3",
+				"order": [
+					"3ff8b841-062b-0448-9530-85e037f48ca8"
+				],
+				"owner": "13389383",
+				"folders_order": [],
+				"createdAt": 1606212439037,
+				"updatedAt": 1606212439037,
+				"id": "4823a6fc-ad94-e521-8799-4fbff07ff93c",
+				"collection_id": "f4fb6b74-8a30-1736-4a5a-c8ea082f1ef3"
+			},
+			{
+				"name": "Get ",
+				"description": "Get requests",
+				"collectionId": "f4fb6b74-8a30-1736-4a5a-c8ea082f1ef3",
+				"collection": "f4fb6b74-8a30-1736-4a5a-c8ea082f1ef3",
+				"order": [
+					"266822f4-58fa-6ee5-6828-7bb131583889",
+					"285aef2c-ed71-57cc-9c7b-c62b4ab23c73"
+				],
+				"owner": "13389383",
+				"folders_order": [],
+				"createdAt": 1606211327170,
+				"updatedAt": 1606211327170,
+				"id": "ca018812-e6b5-92ba-1c1d-976170c47280",
+				"collection_id": "f4fb6b74-8a30-1736-4a5a-c8ea082f1ef3"
+			},
+			{
+				"name": "Post",
+				"description": "post requests",
+				"collectionId": "f4fb6b74-8a30-1736-4a5a-c8ea082f1ef3",
+				"collection": "f4fb6b74-8a30-1736-4a5a-c8ea082f1ef3",
+				"order": [
+					"6cee6e4f-510e-2ae8-2e22-4c57bcbfa72d",
+					"b3b26c81-fa40-95cf-3fb9-727504f1cdcc"
+				],
+				"owner": "13389383",
+				"folders_order": [],
+				"createdAt": 1606211359467,
+				"updatedAt": 1606211359467,
+				"id": "94903e29-977e-c2cf-8ba6-af3fe6522fb5",
+				"collection_id": "f4fb6b74-8a30-1736-4a5a-c8ea082f1ef3"
+			}
+		],
+		"folders_order": [
+			"ca018812-e6b5-92ba-1c1d-976170c47280",
+			"94903e29-977e-c2cf-8ba6-af3fe6522fb5",
+			"4823a6fc-ad94-e521-8799-4fbff07ff93c"
+		],
+		"requests": [
+			{
+				"id": "266822f4-58fa-6ee5-6828-7bb131583889",
+				"headers": "",
+				"headerData": [],
+				"url": "{{base_url}}api/users?page=2",
+				"folder": "94b732ad-32fe-7243-414c-fddb77d612bb",
+				"queryParams": [
+					{
+						"key": "page",
+						"value": "2",
+						"equals": true,
+						"description": "",
+						"enabled": true
+					}
+				],
+				"preRequestScript": null,
+				"pathVariables": {},
+				"pathVariableData": [],
+				"method": "GET",
+				"data": null,
+				"dataMode": "params",
+				"version": 2,
+				"tests": "tests[\"Status code is 200\"] = responseCode.code === 200;\n\nvar schema = {\n \"items\": {\n \"type\": \"boolean\"\n }\n};\nvar data1 = [true, false];\nvar data2 = [true, 123];\n\ntests[\"Valid Data1\"] = tv4.validate(data1, schema);\nconsole.log(\"Validation failed: \", tv4.error);\n\n\ntests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");\n\n\n",
+				"currentHelper": "normal",
+				"helperAttributes": {},
+				"time": 1606821621414,
+				"name": "get request",
+				"description": "blog name",
+				"collectionId": "f4fb6b74-8a30-1736-4a5a-c8ea082f1ef3",
+				"responses": []
+			},
+			{
+				"id": "285aef2c-ed71-57cc-9c7b-c62b4ab23c73",
+				"headers": "",
+				"headerData": [],
+				"url": "{{base_url}}api/users/2",
+				"folder": "94b732ad-32fe-7243-414c-fddb77d612bb",
+				"queryParams": [],
+				"preRequestScript": null,
+				"pathVariables": {},
+				"pathVariableData": [],
+				"method": "GET",
+				"data": null,
+				"dataMode": "params",
+				"version": 2,
+				"tests": "tests[\"Status code is 200\"] = responseCode.code === 200;\n\nvar schema = {\n \"items\": {\n \"type\": \"boolean\"\n }\n};\nvar data1 = [true, false];\nvar data2 = [true, 123];\n\ntests[\"Valid Data1\"] = tv4.validate(data1, schema);\nconsole.log(\"Validation failed: \", tv4.error);\n\n\ntests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");\n\n\n",
+				"currentHelper": "normal",
+				"helperAttributes": {},
+				"time": 1606821658582,
+				"name": "get request/single",
+				"description": "blog name",
+				"collectionId": "f4fb6b74-8a30-1736-4a5a-c8ea082f1ef3",
+				"responses": []
+			},
+			{
+				"id": "3ff8b841-062b-0448-9530-85e037f48ca8",
+				"headers": "Content-Type: application/json\n",
+				"headerData": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": "",
+						"enabled": true
+					}
+				],
+				"url": "{{base_url}}api/users/2",
+				"folder": "4823a6fc-ad94-e521-8799-4fbff07ff93c",
+				"queryParams": [],
+				"preRequestScript": null,
+				"pathVariables": {},
+				"pathVariableData": [],
+				"method": "DELETE",
+				"data": "",
+				"dataMode": "raw",
+				"version": 2,
+				"tests": "\nvar schema = {\n \"items\": {\n \"type\": \"boolean\"\n }\n};\nvar data1 = [true, false];\n\ntests[\"Valid Data1\"] = tv4.validate(data1, schema);\nconsole.log(\"Validation failed: \", tv4.error);\n\n\n\n\n\n\npostman.clearGlobalVariable(\"variable_key\");\n\n",
+				"currentHelper": "normal",
+				"helperAttributes": {},
+				"time": 1606826597260,
+				"name": "delete",
+				"description": "delete request",
+				"collectionId": "f4fb6b74-8a30-1736-4a5a-c8ea082f1ef3",
+				"responses": []
+			},
+			{
+				"id": "6cee6e4f-510e-2ae8-2e22-4c57bcbfa72d",
+				"headers": "",
+				"headerData": [],
+				"url": "{{base_url}}api/users",
+				"folder": "94903e29-977e-c2cf-8ba6-af3fe6522fb5",
+				"queryParams": [],
+				"preRequestScript": null,
+				"pathVariables": {},
+				"pathVariableData": [],
+				"method": "POST",
+				"data": "{\n\n\t\"name\":\"morphues\",\n\t\"job\":\"leader\"\n\n}",
+				"dataMode": "raw",
+				"version": 2,
+				"tests": "tests[\"Successful POST request\"] = responseCode.code === 201 || responseCode.code === 202;\n\ntests[\"Status code is 201\"] = responseCode.code === 201;\n\ntests[\"Status code name has string\"] = responseCode.name.has(\"Created\");\n\ntests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");\n\n\n",
+				"currentHelper": "normal",
+				"helperAttributes": {},
+				"time": 1606821126363,
+				"name": "post",
+				"description": "post requests",
+				"collectionId": "f4fb6b74-8a30-1736-4a5a-c8ea082f1ef3",
+				"responses": []
+			},
+			{
+				"id": "b3b26c81-fa40-95cf-3fb9-727504f1cdcc",
+				"headers": "Content-Type: application/json\n",
+				"headerData": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": "",
+						"enabled": true
+					}
+				],
+				"url": "{{base_url}}api/login",
+				"folder": "94903e29-977e-c2cf-8ba6-af3fe6522fb5",
+				"queryParams": [],
+				"preRequestScript": null,
+				"pathVariables": {},
+				"pathVariableData": [],
+				"method": "POST",
+				"data": "{\n\n\t\"email\":\"eve.holt@reqres.in\",\n\t\"password\":\"cityslicka\"\n\n}",
+				"dataMode": "raw",
+				"version": 2,
+				"tests": "tests[\"Status code is 200\"] = responseCode.code === 200;\n\ntests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");\n\n\nvar schema = {\n \"items\": {\n \"type\": \"boolean\"\n }\n};\nvar data1 = [true, false];\nvar data2 = [true, 123];\n\ntests[\"Valid Data1\"] = tv4.validate(data1, schema);\nconsole.log(\"Validation failed: \", tv4.error);\n\n",
+				"currentHelper": "normal",
+				"helperAttributes": {},
+				"time": 1606821406014,
+				"name": "post",
+				"description": "post request",
+				"collectionId": "f4fb6b74-8a30-1736-4a5a-c8ea082f1ef3",
+				"responses": []
+			}
+		],
+		"timestamp": 1606210715890,
+		"synced": false,
+		"syncedFilename": "",
+		"remote_id": 0,
+		"remoteLink": "",
+		"remoteLinkUpdatedAt": null,
+		"public": false,
+		"owner": "13389383",
+		"subscribed": false,
+		"createdAt": 1606210715890,
+		"updatedAt": 1606213402396,
+		"write": true,
+		"published": false,
+		"favorite": true,
+		"permissions": {},
+		"syncedPermissions": {},
+		"sharedWithTeam": false
+	},
+	"folder": null,
+	"environment": null,
+	"globals": [
+		{
+			"key": "base_url",
+			"value": "https://reqres.in/",
+			"description": "",
+			"type": "text",
+			"enabled": true
+		}
+	],
+	"results": [
+		{
+			"id": "266822f4-58fa-6ee5-6828-7bb131583889",
+			"name": "get request",
+			"url": "{{base_url}}api/users?page=2",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Valid Data1": true,
+				"Content-Type is present": "application/json; charset=utf-8"
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valid Data1": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				204
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Valid Data1": true,
+					"Content-Type is present": "application/json; charset=utf-8"
+				}
+			],
+			"time": 204,
+			"totalRequestTime": 204,
+			"iterationResults": {}
+		},
+		{
+			"id": "285aef2c-ed71-57cc-9c7b-c62b4ab23c73",
+			"name": "get request/single",
+			"url": "{{base_url}}api/users/2",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Valid Data1": true,
+				"Content-Type is present": "application/json; charset=utf-8"
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valid Data1": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				191
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Valid Data1": true,
+					"Content-Type is present": "application/json; charset=utf-8"
+				}
+			],
+			"time": 191,
+			"totalRequestTime": 191,
+			"iterationResults": {}
+		},
+		{
+			"id": "6cee6e4f-510e-2ae8-2e22-4c57bcbfa72d",
+			"name": "post",
+			"url": "{{base_url}}api/users",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 201,
+				"name": "Created",
+				"detail": "The request has been fulfilled and resulted in a new resource being created."
+			},
+			"tests": {
+				"Successful POST request": true,
+				"Status code is 201": true,
+				"Status code name has string": true,
+				"Content-Type is present": "application/json; charset=utf-8"
+			},
+			"testPassFailCounts": {
+				"Successful POST request": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code name has string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				261
+			],
+			"allTests": [
+				{
+					"Successful POST request": true,
+					"Status code is 201": true,
+					"Status code name has string": true,
+					"Content-Type is present": "application/json; charset=utf-8"
+				}
+			],
+			"time": 261,
+			"totalRequestTime": 261,
+			"iterationResults": {}
+		},
+		{
+			"id": "b3b26c81-fa40-95cf-3fb9-727504f1cdcc",
+			"name": "post",
+			"url": "{{base_url}}api/login",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Content-Type is present": "application/json; charset=utf-8",
+				"Valid Data1": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valid Data1": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				240
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Content-Type is present": "application/json; charset=utf-8",
+					"Valid Data1": true
+				}
+			],
+			"time": 240,
+			"totalRequestTime": 240,
+			"iterationResults": {}
+		},
+		{
+			"id": "3ff8b841-062b-0448-9530-85e037f48ca8",
+			"name": "delete",
+			"url": "{{base_url}}api/users/2",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content",
+				"detail": "The server successfully processed the request, but is not returning any content."
+			},
+			"tests": {
+				"Valid Data1": true
+			},
+			"testPassFailCounts": {
+				"Valid Data1": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				395
+			],
+			"allTests": [
+				{
+					"Valid Data1": true
+				}
+			],
+			"time": 395,
+			"totalRequestTime": 395,
+			"iterationResults": {}
+		}
+	],
+	"totalPass": 14,
+	"totalFail": 0,
+	"totalTime": 1291,
+	"lifecycle": "done",
+	"willStop": false,
+	"requests": [
+		{
+			"name": "get request",
+			"id": "266822f4-58fa-6ee5-6828-7bb131583889",
+			"url": "{{base_url}}api/users?page=2",
+			"time": 204,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valid Data1": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"gridTitles": [
+				"Status code is 200",
+				"Valid Data1",
+				"Content-Type is present"
+			],
+			"gridData": [
+				[
+					true,
+					true,
+					true
+				]
+			],
+			"tests": {
+				"Status code is 200": true,
+				"Valid Data1": true,
+				"Content-Type is present": true
+			}
+		},
+		{
+			"name": "get request/single",
+			"id": "285aef2c-ed71-57cc-9c7b-c62b4ab23c73",
+			"url": "{{base_url}}api/users/2",
+			"time": 191,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valid Data1": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"gridTitles": [
+				"Status code is 200",
+				"Valid Data1",
+				"Content-Type is present"
+			],
+			"gridData": [
+				[
+					true,
+					true,
+					true
+				]
+			],
+			"tests": {
+				"Status code is 200": true,
+				"Valid Data1": true,
+				"Content-Type is present": true
+			}
+		},
+		{
+			"name": "post",
+			"id": "6cee6e4f-510e-2ae8-2e22-4c57bcbfa72d",
+			"url": "{{base_url}}api/users",
+			"time": 261,
+			"responseCode": {
+				"code": 201,
+				"name": "Created",
+				"detail": "The request has been fulfilled and resulted in a new resource being created."
+			},
+			"testPassFailCounts": {
+				"Successful POST request": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code name has string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"gridTitles": [
+				"Successful POST request",
+				"Status code is 201",
+				"Status code name has string",
+				"Content-Type is present"
+			],
+			"gridData": [
+				[
+					true,
+					true,
+					true,
+					true
+				]
+			],
+			"tests": {
+				"Successful POST request": true,
+				"Status code is 201": true,
+				"Status code name has string": true,
+				"Content-Type is present": true
+			}
+		},
+		{
+			"name": "post",
+			"id": "b3b26c81-fa40-95cf-3fb9-727504f1cdcc",
+			"url": "{{base_url}}api/login",
+			"time": 240,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valid Data1": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"gridTitles": [
+				"Status code is 200",
+				"Content-Type is present",
+				"Valid Data1"
+			],
+			"gridData": [
+				[
+					true,
+					true,
+					true
+				]
+			],
+			"tests": {
+				"Status code is 200": true,
+				"Content-Type is present": true,
+				"Valid Data1": true
+			}
+		},
+		{
+			"name": "delete",
+			"id": "3ff8b841-062b-0448-9530-85e037f48ca8",
+			"url": "{{base_url}}api/users/2",
+			"time": 395,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content",
+				"detail": "The server successfully processed the request, but is not returning any content."
+			},
+			"testPassFailCounts": {
+				"Valid Data1": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"gridTitles": [
+				"Valid Data1"
+			],
+			"gridData": [
+				[
+					true
+				]
+			],
+			"tests": {
+				"Valid Data1": true
+			}
+		}
+	],
+	"synced": false
+}

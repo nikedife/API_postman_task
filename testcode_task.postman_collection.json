@@ -1,0 +1,193 @@
+{
+	"id": "f4fb6b74-8a30-1736-4a5a-c8ea082f1ef3",
+	"name": "testcode_task",
+	"description": "api test ",
+	"order": [],
+	"folders": [
+		{
+			"name": "Delete",
+			"description": "delete request",
+			"collectionId": "f4fb6b74-8a30-1736-4a5a-c8ea082f1ef3",
+			"order": [
+				"3ff8b841-062b-0448-9530-85e037f48ca8"
+			],
+			"owner": "13389383",
+			"folders_order": [],
+			"id": "4823a6fc-ad94-e521-8799-4fbff07ff93c"
+		},
+		{
+			"name": "Get ",
+			"description": "Get requests",
+			"collectionId": "f4fb6b74-8a30-1736-4a5a-c8ea082f1ef3",
+			"order": [
+				"266822f4-58fa-6ee5-6828-7bb131583889",
+				"285aef2c-ed71-57cc-9c7b-c62b4ab23c73"
+			],
+			"owner": "13389383",
+			"folders_order": [],
+			"id": "ca018812-e6b5-92ba-1c1d-976170c47280"
+		},
+		{
+			"name": "Post",
+			"description": "post requests",
+			"collectionId": "f4fb6b74-8a30-1736-4a5a-c8ea082f1ef3",
+			"order": [
+				"6cee6e4f-510e-2ae8-2e22-4c57bcbfa72d",
+				"b3b26c81-fa40-95cf-3fb9-727504f1cdcc"
+			],
+			"owner": "13389383",
+			"folders_order": [],
+			"id": "94903e29-977e-c2cf-8ba6-af3fe6522fb5"
+		}
+	],
+	"folders_order": [
+		"ca018812-e6b5-92ba-1c1d-976170c47280",
+		"94903e29-977e-c2cf-8ba6-af3fe6522fb5",
+		"4823a6fc-ad94-e521-8799-4fbff07ff93c"
+	],
+	"timestamp": 1606210715890,
+	"owner": "13389383",
+	"public": false,
+	"requests": [
+		{
+			"id": "266822f4-58fa-6ee5-6828-7bb131583889",
+			"headers": "",
+			"headerData": [],
+			"url": "{{base_url}}api/users?page=2",
+			"folder": "94b732ad-32fe-7243-414c-fddb77d612bb",
+			"queryParams": [
+				{
+					"key": "page",
+					"value": "2",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": "tests[\"Status code is 200\"] = responseCode.code === 200;\n\nvar schema = {\n \"items\": {\n \"type\": \"boolean\"\n }\n};\nvar data1 = [true, false];\nvar data2 = [true, 123];\n\ntests[\"Valid Data1\"] = tv4.validate(data1, schema);\nconsole.log(\"Validation failed: \", tv4.error);\n\n\ntests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");\n\n\n",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1606821621414,
+			"name": "get request",
+			"description": "blog name",
+			"collectionId": "f4fb6b74-8a30-1736-4a5a-c8ea082f1ef3",
+			"responses": []
+		},
+		{
+			"id": "285aef2c-ed71-57cc-9c7b-c62b4ab23c73",
+			"headers": "",
+			"headerData": [],
+			"url": "{{base_url}}api/users/2",
+			"folder": "94b732ad-32fe-7243-414c-fddb77d612bb",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": "tests[\"Status code is 200\"] = responseCode.code === 200;\n\nvar schema = {\n \"items\": {\n \"type\": \"boolean\"\n }\n};\nvar data1 = [true, false];\nvar data2 = [true, 123];\n\ntests[\"Valid Data1\"] = tv4.validate(data1, schema);\nconsole.log(\"Validation failed: \", tv4.error);\n\n\ntests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");\n\n\n",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1606821658582,
+			"name": "get request/single",
+			"description": "blog name",
+			"collectionId": "f4fb6b74-8a30-1736-4a5a-c8ea082f1ef3",
+			"responses": []
+		},
+		{
+			"id": "3ff8b841-062b-0448-9530-85e037f48ca8",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{base_url}}api/users/2",
+			"folder": "4823a6fc-ad94-e521-8799-4fbff07ff93c",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "pm.test(\"Status code is 204\", function() {\r\n    pm.response.to.have.status(204);\r\n});\r\npm.globals.set(\"variable_key\", \"variable_value\");\r\npm.test(\"Body is correct\", function () {\r\n    pm.response.to.have.body(\"response_body_string\");\r\n});\r\npm.test(\"Response time is less than 200ms\", function () {\r\n    pm.expect(pm.response.responseTime).to.be.below(200);\r\n});\r\n",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1606217094985,
+			"name": "delete",
+			"description": "delete request",
+			"collectionId": "f4fb6b74-8a30-1736-4a5a-c8ea082f1ef3",
+			"responses": [],
+			"rawModeData": ""
+		},
+		{
+			"id": "6cee6e4f-510e-2ae8-2e22-4c57bcbfa72d",
+			"headers": "",
+			"headerData": [],
+			"url": "{{base_url}}api/users",
+			"folder": "94903e29-977e-c2cf-8ba6-af3fe6522fb5",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "tests[\"Successful POST request\"] = responseCode.code === 201 || responseCode.code === 202;\n\ntests[\"Status code is 201\"] = responseCode.code === 201;\n\ntests[\"Status code name has string\"] = responseCode.name.has(\"Created\");\n\ntests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");\n\n\n",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1606821126363,
+			"name": "post",
+			"description": "post requests",
+			"collectionId": "f4fb6b74-8a30-1736-4a5a-c8ea082f1ef3",
+			"responses": [],
+			"rawModeData": "{\n\n\t\"name\":\"morphues\",\n\t\"job\":\"leader\"\n\n}"
+		},
+		{
+			"id": "b3b26c81-fa40-95cf-3fb9-727504f1cdcc",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{base_url}}api/login",
+			"folder": "94903e29-977e-c2cf-8ba6-af3fe6522fb5",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "tests[\"Status code is 200\"] = responseCode.code === 200;\n\ntests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");\n\n\nvar schema = {\n \"items\": {\n \"type\": \"boolean\"\n }\n};\nvar data1 = [true, false];\nvar data2 = [true, 123];\n\ntests[\"Valid Data1\"] = tv4.validate(data1, schema);\nconsole.log(\"Validation failed: \", tv4.error);\n\n",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1606821406014,
+			"name": "post",
+			"description": "post request",
+			"collectionId": "f4fb6b74-8a30-1736-4a5a-c8ea082f1ef3",
+			"responses": [],
+			"rawModeData": "{\n\n\t\"email\":\"eve.holt@reqres.in\",\n\t\"password\":\"cityslicka\"\n\n}"
+		}
+	]
+}
